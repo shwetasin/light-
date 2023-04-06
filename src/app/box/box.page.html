@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Box</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row> 
+      <ion-col *ngIf="isChecked" [ngStyle]="{'background-color':'Pink'}">Pink</ion-col>
+      <ion-item class="icon">
+      <ion-toggle (ionChange)="handleChange($event)"></ion-toggle>
+    </ion-item>
+      <ion-col *ngIf="!isChecked"[ngStyle]="{'background-color':'Blue'}">Blue</ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>
